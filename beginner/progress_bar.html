@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress Bar</title>
+</head>
+<style>
+    .rect {
+      width: 500px;
+      height: 50px;
+      background-color: darkgray; 
+      display: flex;
+
+    }
+    #left {
+        height: 100%;
+        width: 2%;
+        background-color: green; 
+    }
+
+</style>
+<body>
+
+    <div>
+        <h1>Progress....</h1>
+        <div class="rect">
+            <div id="left"></div>
+        </div>
+
+    </div>
+
+
+  <script>
+    const bar = document.getElementById("left");
+    let progress = 0;
+    setInterval(() => {
+        bar.style.width = `${progress}%`
+        progress += 1;
+        if(progress == 100)
+            clearInterval();
+
+    }, 90);
+  </script>
+</body>
+</html>

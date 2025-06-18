@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stars</title>
+  <style>
+    .star{
+        color: darkgrey;
+    }
+    .star:hover,
+    .star:hover ~ .star{
+        color:black;
+    }
+
+    #stars {
+        display: inline-flex;
+        direction: rtl;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+    <div>
+        <h1>Rating</h1>
+            <div id="stars">
+                <span class="star">☆</span>
+                <span class="star">☆</span>
+                <span class="star">☆</span>
+                <span class="star">☆</span>
+                <span class="star">☆</span>
+            </div>
+    </div>
+
+
+  <script src="star.js"></script>
+</body>
+</html>

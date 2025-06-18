@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traffic</title>
+</head>
+<style>
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+      border-radius: 50%; /* This makes it a circle */
+      padding : 2rem
+    }
+
+    .active#l1 { background-color: red; }
+    .active#l2 { background-color: yellow; }
+    .active#l3 { background-color: green; }
+</style>
+<body>
+
+    <div>
+        <h1>Traffic Light</h1>
+        <div id = "l1" class = "circle "></div>
+        <div id = "l2" class = "circle active"></div>
+        <div id = "l3" class = "circle "></div>
+        
+    </div>
+
+
+  <script>
+    const lights = document.querySelectorAll(".circle");
+    let cl = document.querySelector(".active");
+    console.log();
+    let current = parseInt(cl.id.charAt(1));
+    setInterval(() => {
+        current = (current % 3) + 1; 
+        lights.forEach((light) => {
+            light.classList.remove("active");
+        })
+
+        cl = document.getElementById("l" + current);
+        cl.classList.add("active");
+
+    },500)
+  </script>
+</body>
+</html>

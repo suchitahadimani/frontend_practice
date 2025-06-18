@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holy Grail</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .header, .foot {
+      background-color: red;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      display: flex;
+      min-height: 300px;
+    }
+
+    .nav, .side {
+      width: 150px;
+      background-color: orange;
+      padding: 1rem;
+    }
+
+    .main {
+      flex: 1;
+      background-color: yellow;
+      padding: 1rem;
+    }
+
+    .foot {
+      background-color: red;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Header</div>
+
+  <div class="container">
+    <div class="nav">Navigation</div>
+    <div class="main">Main</div>
+    <div class="side">Sidebar</div>
+  </div>
+
+  <div class="foot">Footer</div>
+
+</body>
+</html>
